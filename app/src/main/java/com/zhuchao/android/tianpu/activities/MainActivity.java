@@ -310,6 +310,8 @@ public class MainActivity extends Activity implements OnTouchListener, OnGlobalF
 
         requestPermition();
         setupItemBottomTag();
+        OMedia oMedia = new OMedia("http://ivi.bupt.edu.cn/hls/cctv10.m3u8");
+        oMedia.with(this).playOn(binding.surfaceView);
     }
 
     @Override
@@ -660,7 +662,7 @@ public class MainActivity extends Activity implements OnTouchListener, OnGlobalF
             case R.id.fl1:
                 selEffectBridge.setUpRectResource(R.drawable.bgmbgm);
                 selEffectBridge.setVisibleWidget(false);
-                binding.mainUpView.setFocusView(newFocus, oldFocus, 1.1f);
+                binding.mainUpView.setFocusView(newFocus, oldFocus, 1.0f);
                 /*if(oldFocus !=null)
                     oldFocus.animate().scaleX(1.0f).scaleY(1.0f).start();
                 newFocus.animate().scaleX(1.2f).scaleY(1.2f).start();*/
@@ -1885,14 +1887,18 @@ public class MainActivity extends Activity implements OnTouchListener, OnGlobalF
 
     @Override
     public void OnSessionComplete(int i, String s) {
-        List<OMedia> list = MediaLibrary.getMediaListByIndex(0);
-        if(list != null)
+        List<OMedia> list = null;//MediaLibrary.getMediaListByIndex(0);
+        OMedia oMedia = null;
+        if(list != null && list.size()>0)
         {
             if(list.get(0) != null) {
-                OMedia oMedia = (OMedia) list.get(0);
+                oMedia = (OMedia) list.get(0);
                 oMedia.with(this).playOn(binding.surfaceView);
             }
         }
+        //else
+            //oMedia = new OMedia("http://ivi.bupt.edu.cn/hls/cctv10.m3u8");
+            //oMedia.with(this).playOn(binding.surfaceView);
     }
 
 
