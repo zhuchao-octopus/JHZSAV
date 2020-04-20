@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.zhuchao.android:libPlayUtil:2.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d80a10d3a40a0e16881cdae3ea12fe3c/jetified-libPlayUtil-2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d80a10d3a40a0e16881cdae3ea12fe3c/jetified-libPlayUtil-2.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

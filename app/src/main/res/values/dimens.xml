@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pull_item_hw">86.0dip</dimen>
+    <dimen name="pull_item_marginTop">28.0dip</dimen>
+    <dimen name="pull_item_margin">58.0dip</dimen>
+    <dimen name="bottom_app_root_w">1170dp</dimen>
+    <dimen name="bottom_app_root_h">250dp</dimen>
+    <dimen name="bottom_app_root_bottom_margin">30dp</dimen>
+</resources>

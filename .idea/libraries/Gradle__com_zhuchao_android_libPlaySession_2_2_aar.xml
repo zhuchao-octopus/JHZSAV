@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.zhuchao.android:libPlaySession:2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f37ff7e01fb8e738b65e52797b9df75/jetified-libPlaySession-2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f37ff7e01fb8e738b65e52797b9df75/jetified-libPlaySession-2.2/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

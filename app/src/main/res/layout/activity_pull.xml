@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/activity_pull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/pull_down_contain"
+            android:layout_width="1500.0dip"
+            android:layout_height="250.0dip"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@drawable/kuang">
+
+            <ImageView
+                android:id="@+id/pull_tag_9301"
+                style="@style/BOTTOM_APP_LEFT_BTN_STYLE" />
+
+            <ImageView
+                android:id="@+id/pull_tag_9302"
+                android:layout_toEndOf="@id/pull_tag_9301"
+                style="@style/BOTTOM_APP_BTN_STYLE" />
+
+            <ImageView
+                android:id="@+id/pull_tag_9303"
+                android:layout_toEndOf="@id/pull_tag_9302"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9304"
+                android:layout_toEndOf="@id/pull_tag_9303"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9305"
+                android:layout_toEndOf="@id/pull_tag_9304"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9306"
+                android:layout_toEndOf="@id/pull_tag_9305"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9307"
+                android:layout_toEndOf="@id/pull_tag_9306"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9308"
+                android:layout_toEndOf="@id/pull_tag_9307"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9309"
+                android:layout_below="@id/pull_tag_9301"
+                style="@style/BOTTOM_APP_LEFT_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9310"
+                android:layout_below="@id/pull_tag_9302"
+                android:layout_toEndOf="@id/pull_tag_9309"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9311"
+                android:layout_below="@id/pull_tag_9303"
+                android:layout_toEndOf="@id/pull_tag_9310"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9312"
+                android:layout_below="@id/pull_tag_9304"
+                android:layout_toEndOf="@id/pull_tag_9311"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9313"
+                android:layout_below="@id/pull_tag_9305"
+                android:layout_toEndOf="@id/pull_tag_9312"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9314"
+                android:layout_below="@id/pull_tag_9306"
+                android:layout_toEndOf="@id/pull_tag_9313"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9315"
+                android:layout_below="@id/pull_tag_9307"
+                android:layout_toEndOf="@+id/pull_tag_9314"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+
+            <ImageView
+                android:id="@+id/pull_tag_9316"
+                android:layout_below="@+id/pull_tag_9308"
+                android:layout_toEndOf="@+id/pull_tag_9315"
+                style="@style/BOTTOM_APP_BTN_STYLE"/>
+        </RelativeLayout>
+
+        <com.zhuchao.android.tianpu.views.MainUpView
+            android:id="@+id/pull_mianup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</layout>

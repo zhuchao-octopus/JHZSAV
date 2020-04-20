@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/main_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:focusable="true">
+
+		<ImageView
+			android:id="@+id/iv_bwi"
+			android:layout_width="500dp"
+			android:layout_height="300dp"
+			android:scaleType="fitXY"
+			android:layout_marginTop="189dp"
+			android:layout_marginLeft="400.0dip"
+			android:src="@drawable/battery_warnning"
+			android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bbbg" />
+
+        <RelativeLayout
+            android:id="@+id/top_info"
+            android:layout_width="match_parent"
+            android:layout_height="120.0dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logo_iv"
+                android:layout_width="331.0dip"
+                android:layout_height="65.0dip"
+                android:layout_marginLeft="61.3dip"
+                android:layout_marginTop="35.0dip"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:src="@drawable/bd" />
+
+            <FrameLayout
+                android:id="@+id/scroll_root"
+                android:layout_width="380.0dip"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="25.0dip"
+                android:layout_marginTop="50.0dip"
+                android:layout_toRightOf="@id/logo_iv">
+
+                <com.zhuchao.android.tianpu.views.MarqueeTextView
+                    android:id="@+id/scroll_tv"
+                    android:layout_width="340.0dip"
+                    android:layout_height="40.0dip"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="22.0dip"
+                    tools:ignore="RelativeOverlap" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/top_fl1"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:layout_marginLeft="92.0dip"
+                android:layout_marginTop="72.0dip"
+                android:layout_toRightOf="@+id/logo_iv"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/top_iv1"
+                    android:layout_width="25.0dip"
+                    android:layout_height="25.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/icon_iv1" />
+
+                <TextView
+                    android:id="@+id/top_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30.0dip"
+                    android:focusable="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="20.0dip"
+                    android:visibility="invisible"
+                    tools:ignore="RelativeOverlap" />
+            </FrameLayout>
+
+
+            <ImageView
+                android:id="@+id/mic_a"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="10.0dip"
+                android:layout_toStartOf="@id/mic_b" />
+
+            <ImageView
+                android:id="@+id/mic_b"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="10.0dip"
+                android:layout_toStartOf="@id/bluetooth" />
+
+
+            <ImageView
+                android:id="@+id/bluetooth"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20.0dip"
+                android:layout_toLeftOf="@id/iv_battery" />
+
+			<ImageView
+				android:id="@+id/iv_battery"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="52dp"
+				android:layout_marginRight="10dp"
+				android:layout_toLeftOf="@id/net_iv"
+				android:src="@drawable/cell1"
+				android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/net_iv"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="30.0dip"
+                android:layout_toStartOf="@id/time_tv"
+                android:src="@drawable/netno"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="40.0dip"
+                android:layout_marginRight="61.3dp"
+                android:text="2017-8-14"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/week_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_tv"
+                android:layout_alignStart="@id/date_tv"
+                android:text="Monday"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/date_tv"
+                android:text="17:36"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                tools:ignore="RelativeOverlap" />
+            <TextView
+                android:id="@+id/location_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60.0dip"
+                android:layout_marginRight="25.0dip"
+                android:layout_toLeftOf="@+id/time_tv"
+                android:text="Thâm quyến"
+                android:textSize="26.0dip"
+                android:visibility="gone"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/weather_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="63.0dip"
+                android:layout_marginRight="25.0dip"
+                android:layout_toLeftOf="@+id/location_tv"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/temperature_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60.0dip"
+                android:layout_marginRight="25.0dip"
+                android:layout_toLeftOf="@+id/weather_iv"
+                android:text="24°C"
+                android:textSize="26.0dip"
+                android:visibility="gone"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_app"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_info"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <!--全民-->
+            <FrameLayout
+                android:id="@+id/fl0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <ImageView
+                    android:id="@+id/bg_iv1"
+                    android:layout_width="331dp"
+                    android:layout_height="160dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tpqmkg" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar1"
+                    style="?android:progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:max="100"
+                    android:progressDrawable="@drawable/layer_progress" />
+
+                <TextView
+                    android:id="@+id/tv_state1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/title_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="170.0dip"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/app_store"
+                    android:textColor="@android:color/white"
+                    android:textSize="35.0dip"
+                    android:visibility="gone"
+                    tools:ignore="RelativeOverlap" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl1"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/qq" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar9"
+                    style="?android:progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:max="100"
+                    android:progressDrawable="@drawable/layer_progress" />
+
+                <TextView
+                    android:id="@+id/tv_state9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fl5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/fl0"
+				android:clickable="true"
+				android:clipChildren="false"
+				android:clipToPadding="false"
+				android:focusable="true"
+				android:focusableInTouchMode="true">
+
+                <ImageView
+                    android:id="@+id/bg_iv5"
+                    android:layout_width="498dp"
+                    android:layout_height="276dp"
+                    android:src="@drawable/bb2" />
+
+                <ImageView
+                    android:id="@+id/bg_icon"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+
+            <!--蓝牙输入-->
+            <FrameLayout
+                android:id="@+id/fl11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl5"
+                android:layout_marginLeft="10.0dip"
+                android:layout_toRightOf="@id/fl2"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusRight="@id/fl14">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/bg_iv111"
+                    android:layout_width="166dp"
+                    android:layout_height="55dp"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:scaleType="fitXY"
+                    fresco:failureImage="@drawable/failedbg1"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/xaa"
+                    fresco:placeholderImageScaleType="fitXY"
+                    fresco:retryImage="@drawable/failedbg1"
+                    fresco:retryImageScaleType="fitXY" />
+            </FrameLayout>
+
+            <!--同轴 去掉-->
+            <FrameLayout
+                android:id="@+id/fl12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl5"
+                android:layout_toRightOf="@id/fl11"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:visibility="gone">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/bg_iv112"
+                    android:layout_width="83dp"
+                    android:layout_height="55dp"
+                    android:scaleType="fitXY"
+                    fresco:failureImage="@drawable/failedbg1"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/xab"
+                    fresco:placeholderImageScaleType="fitXY"
+                    fresco:retryImage="@drawable/failedbg1"
+                    fresco:retryImageScaleType="fitXY" />
+            </FrameLayout>
+
+            <!--光纤 去掉-->
+            <FrameLayout
+                android:id="@+id/fl13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl5"
+                android:layout_toRightOf="@id/fl12"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:visibility="gone">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/bg_iv113"
+                    android:layout_width="83dp"
+                    android:layout_height="55dp"
+                    android:scaleType="fitXY"
+                    fresco:failureImage="@drawable/failedbg1"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/xac"
+                    fresco:placeholderImageScaleType="fitXY"
+                    fresco:retryImage="@drawable/failedbg1"
+                    fresco:retryImageScaleType="fitXY" />
+            </FrameLayout>
+
+            <!--line in 模拟输入-->
+            <FrameLayout
+                android:id="@+id/fl14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl5"
+                android:layout_toRightOf="@id/fl13"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusRight="@id/fl15">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="55dp"
+                    android:background="#fff" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/bg_iv114"
+                    android:layout_width="166dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="1dp"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    fresco:failureImage="@drawable/failedbg1"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/xad"
+                    fresco:placeholderImageScaleType="fitXY"
+                    fresco:retryImage="@drawable/failedbg1"
+                    fresco:retryImageScaleType="fitXY" />
+            </FrameLayout>
+
+            <!--tf-->
+            <FrameLayout
+                android:id="@+id/fl15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl5"
+                android:layout_toRightOf="@id/fl14"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="55dp"
+                    android:background="#fff" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/bg_iv115"
+                    android:layout_width="160dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="1dp"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    fresco:failureImage="@drawable/failedbg1"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/xae"
+                    fresco:placeholderImageScaleType="fitXY"
+                    fresco:retryImage="@drawable/failedbg1"
+                    fresco:retryImageScaleType="fitXY"
+                    tools:src="@drawable/xae" />
+            </FrameLayout>
+
+
+            <!--最后使用的应用-->
+            <FrameLayout
+                android:id="@+id/fl16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl5"
+                android:layout_toRightOf="@id/fl15"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:nextFocusRight="@id/ad"
+                android:visibility="gone">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/bg_iv116"
+                    android:layout_width="83dp"
+                    android:layout_height="55dp"
+                    android:scaleType="fitXY"
+                    fresco:failureImage="@drawable/failedbg1"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/nnn"
+                    fresco:placeholderImageScaleType="fitXY"
+                    fresco:retryImage="@drawable/failedbg1"
+                    fresco:retryImageScaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/iv_lastone"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl2"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/fl4"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <ImageView
+                    android:id="@+id/bg_iv8"
+                    android:layout_width="160.0dip"
+                    android:layout_height="140.0dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dsj" />
+
+                <TextView
+                    android:id="@+id/tv_state8"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100.0dip"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/p_d"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl0"
+                android:layout_marginLeft="11.0dip"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/fl1"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <ImageView
+                    android:id="@+id/bg_add1"
+                    android:layout_width="160.0dip"
+                    android:layout_height="160.0dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tp3" />
+
+                <ImageView
+                    android:id="@+id/iv_add1"
+                    android:layout_width="80.0dip"
+                    android:layout_height="80.0dip"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/add"
+                    android:visibility="visible"
+                    fresco:failureImage="@drawable/transparent"
+                    fresco:placeholderImageScaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/tv_add1"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="60.0dip"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/please_add"
+                    android:textColor="@android:color/white"
+                    android:textSize="20.0dip"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl11"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/fl2"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <ImageView
+                    android:id="@+id/bg_iv3"
+                    android:layout_width="160.0dip"
+                    android:layout_height="140.0dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tp5" />
+
+                <TextView
+                    android:id="@+id/title_tv3"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100.0dip"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/app_name_app"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl11"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/fl3"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <ImageView
+                    android:id="@+id/bg_iv6"
+                    android:layout_width="160.0dip"
+                    android:layout_height="140dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tp6" />
+
+                <TextView
+                    android:id="@+id/title_tv6"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100.0dip"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/file"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl11"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/fl6"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <ImageView
+                    android:id="@+id/bg_iv7"
+                    android:layout_width="160.0dip"
+                    android:layout_height="140.0dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tp7" />
+
+                <TextView
+                    android:id="@+id/title_tv7"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100.0dip"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/setting"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+            </FrameLayout>
+
+            <!--腾讯视频-->
+            <FrameLayout
+                android:id="@+id/fl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl0"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <ImageView
+                    android:id="@+id/bg_iv2"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tptxsp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar2"
+                    style="?android:progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:max="100"
+                    android:progressDrawable="@drawable/layer_progress" />
+                //未下载
+
+                <TextView
+                    android:id="@+id/tv_state2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/title_tv2"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="170.0dip"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/app_store"
+                    android:textColor="@android:color/white"
+                    android:textSize="35.0dip"
+                    android:visibility="gone"
+                    tools:ignore="RelativeOverlap" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/ad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/fl5"
+                android:clickable="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <com.stx.xhb.xbanner.XBanner
+                    android:id="@+id/ad_bg"
+                    android:layout_width="307dp"
+                    android:layout_height="480dp"
+                    android:background="@drawable/bda"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    fresco:AutoPlayTime="10000"
+                    fresco:pageChangeDuration="700" />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/mac"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@id/ad"
+                android:layout_alignRight="@id/ad"
+                android:text=""
+                android:textSize="20.0dip"
+                android:visibility="visible"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <com.zhuchao.android.tianpu.views.MainUpView
+            android:id="@+id/mainUpView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_fill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</layout>

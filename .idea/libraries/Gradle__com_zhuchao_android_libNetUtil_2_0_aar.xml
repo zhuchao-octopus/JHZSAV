@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.zhuchao.android:libNetUtil:2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/608bab0a95cb27ea21ecb8a8eed30267/jetified-libNetUtil-2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/608bab0a95cb27ea21ecb8a8eed30267/jetified-libNetUtil-2.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

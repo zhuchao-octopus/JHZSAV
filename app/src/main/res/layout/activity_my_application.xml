@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bgg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_linear"
+            android:layout_width="1131.0dip"
+            android:layout_height="55.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25.0dip"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15.0dip">
+
+                <ImageView
+                    android:id="@+id/title_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/title" />
+
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@+id/title_image"
+                    android:text="@string/name_app"
+                    android:textColor="@android:color/white"
+                    android:textSize="30.0sp"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10.0dip"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/ok_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ok_text"
+                    android:layout_alignTop="@+id/ok_text"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ok" />
+
+                <TextView
+                    android:id="@+id/ok_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_toRightOf="@+id/ok_image"
+                    android:paddingTop="4.0dip"
+                    android:text="@string/app_ok_string"
+                    android:textColor="@android:color/white"
+                    android:textSize="26.0sp"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/line" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/app_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginStart="60.0px"
+                android:layout_marginEnd="60.0px">
+
+                <GridView
+                    android:id="@+id/allapps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="none"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="6"
+                    android:scrollbarThumbVertical="@drawable/app_list_image"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

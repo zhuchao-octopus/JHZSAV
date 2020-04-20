@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/u16"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"/>
+
+        <SeekBar
+            android:id="@+id/sb_music"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="false"
+            android:max="100"
+            android:overScrollMode="never" />
+        <ImageView
+            android:id="@+id/iv_mic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/u2"
+            android:layout_toStartOf="@id/sb_music"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"/>
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/sb_music"
+            android:text="60"
+            android:textSize="30sp"
+            android:textColor="#E71D4C"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+
+    </RelativeLayout>
+
+</layout>

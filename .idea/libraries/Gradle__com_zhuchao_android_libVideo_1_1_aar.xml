@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.zhuchao.android:libVideo:1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/65f911debb916d9adf4be67c62e190bb/jetified-libVideo-1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/65f911debb916d9adf4be67c62e190bb/jetified-libVideo-1.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

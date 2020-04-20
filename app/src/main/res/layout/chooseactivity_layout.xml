@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/dialog_chossapp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_back_app">
+
+		<LinearLayout
+			android:id="@+id/linear1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:padding="10.0dip">
+
+			<LinearLayout
+				android:id="@+id/linear2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:paddingLeft="10.0dip"
+				android:paddingBottom="10.0dip">
+
+				<TextView
+					android:id="@id/title"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:paddingLeft="10.0dip"
+					android:text="@string/add_app"
+					android:textColor="#ffffffff"
+					android:textSize="26.0dip"
+					tools:ignore="RelativeOverlap" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linear3"
+				android:layout_width="match_parent"
+				android:layout_height="0.0dip"
+				android:layout_weight="1.0"
+				android:background="@drawable/dialog_context_app"
+				android:orientation="vertical"
+				android:paddingLeft="10.0dip"
+				android:paddingTop="13.0dip"
+				android:paddingRight="10.0dip"
+				android:paddingBottom="18.0dip">
+
+				<ListView
+					android:id="@+id/chooseapp_listview"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:cacheColorHint="#00000000"
+					android:divider="@drawable/divider"
+					android:fadeScrollbars="false"
+					android:listSelector="#00000000"
+					android:paddingRight="6.0dip"
+					android:scrollbarStyle="insideInset" />
+			</LinearLayout>
+		</LinearLayout>
+    </LinearLayout>
+</layout>

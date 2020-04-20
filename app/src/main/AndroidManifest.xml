@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zhuchao.android.tianpu">
+
+    <!--    android:sharedUserId="android.uid.system"-->
+
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.SET_TIME"/>
+    <!-- 静默安装所需权限,如与Manifest报错，请运行Project->clean -->
+    <!-- 允许程序安装应用 -->
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <!-- 允许程序删除应用 -->
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <!-- 允许应用清除应用缓存 -->
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <!-- 允许应用清除应用的用户数据 -->
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:largeHeap="true"
+        android:name="com.zhuchao.android.tianpu.utils.MyApplication"
+
+        android:allowBackup="true"
+        android:persistent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+
+        <activity android:name="com.zhuchao.android.tianpu.activities.MainActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="userLandscape"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|screenLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zhuchao.android.tianpu.activities.AppsActivity" />
+        <service android:name="com.zhuchao.android.tianpu.services.MyService" android:enabled="true"/>
+
+        <service android:name="com.zhuchao.android.tianpu.services.iflytekService" >
+            <intent-filter>
+                <action android:name="com.iflytek.xiri2.app.NOTIFY" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </service>
+
+       <!--
+       <receiver android:name="com.zhuchao.android.tianpu.activities.BootCompletedReceiver" >
+            <intent-filter>
+                &lt;!&ndash; 开机广播 &ndash;&gt;
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>-->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.zhuchao.android.libfilemanager.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
