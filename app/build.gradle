@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         applicationId "com.zhuchao.android.tianpu"
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 76
         versionName "7.6"

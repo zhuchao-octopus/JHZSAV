@@ -319,218 +319,37 @@
 
             <FrameLayout
                 android:id="@+id/fl5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="498dp"
+                android:layout_height="320dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_toEndOf="@id/fl0"
-				android:clickable="true"
-				android:clipChildren="false"
-				android:clipToPadding="false"
-				android:focusable="true"
-				android:focusableInTouchMode="true">
-
-                <ImageView
-                    android:id="@+id/bg_iv5"
-                    android:layout_width="498dp"
-                    android:layout_height="276dp"
-                    android:src="@drawable/bb2" />
-
-                <ImageView
-                    android:id="@+id/bg_icon"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_gravity="center"
-                    android:scaleType="fitXY"
-                    android:visibility="visible" />
-
-            </FrameLayout>
-
-
-            <!--蓝牙输入-->
-            <FrameLayout
-                android:id="@+id/fl11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/fl5"
-                android:layout_marginLeft="10.0dip"
-                android:layout_toRightOf="@id/fl2"
-                android:clickable="true"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:nextFocusRight="@id/fl14">
-
-                <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/bg_iv111"
-                    android:layout_width="166dp"
-                    android:layout_height="55dp"
-                    android:clickable="false"
-                    android:focusableInTouchMode="false"
-                    android:scaleType="fitXY"
-                    fresco:failureImage="@drawable/failedbg1"
-                    fresco:failureImageScaleType="fitXY"
-                    fresco:placeholderImage="@drawable/xaa"
-                    fresco:placeholderImageScaleType="fitXY"
-                    fresco:retryImage="@drawable/failedbg1"
-                    fresco:retryImageScaleType="fitXY" />
-            </FrameLayout>
-
-            <!--同轴 去掉-->
-            <FrameLayout
-                android:id="@+id/fl12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/fl5"
-                android:layout_toRightOf="@id/fl11"
-                android:clickable="true"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:focusable="true"
-                android:visibility="gone">
-
-                <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/bg_iv112"
-                    android:layout_width="83dp"
-                    android:layout_height="55dp"
-                    android:scaleType="fitXY"
-                    fresco:failureImage="@drawable/failedbg1"
-                    fresco:failureImageScaleType="fitXY"
-                    fresco:placeholderImage="@drawable/xab"
-                    fresco:placeholderImageScaleType="fitXY"
-                    fresco:retryImage="@drawable/failedbg1"
-                    fresco:retryImageScaleType="fitXY" />
-            </FrameLayout>
-
-            <!--光纤 去掉-->
-            <FrameLayout
-                android:id="@+id/fl13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/fl5"
-                android:layout_toRightOf="@id/fl12"
-                android:clickable="true"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:focusable="true"
-                android:visibility="gone">
-
-                <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/bg_iv113"
-                    android:layout_width="83dp"
-                    android:layout_height="55dp"
-                    android:scaleType="fitXY"
-                    fresco:failureImage="@drawable/failedbg1"
-                    fresco:failureImageScaleType="fitXY"
-                    fresco:placeholderImage="@drawable/xac"
-                    fresco:placeholderImageScaleType="fitXY"
-                    fresco:retryImage="@drawable/failedbg1"
-                    fresco:retryImageScaleType="fitXY" />
-            </FrameLayout>
-
-            <!--line in 模拟输入-->
-            <FrameLayout
-                android:id="@+id/fl14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/fl5"
-                android:layout_toRightOf="@id/fl13"
-                android:clickable="true"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:nextFocusRight="@id/fl15">
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="55dp"
-                    android:background="#fff" />
-
-                <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/bg_iv114"
-                    android:layout_width="166dp"
-                    android:layout_height="55dp"
-                    android:layout_marginLeft="1dp"
-                    android:clickable="false"
-                    android:scaleType="fitXY"
-                    fresco:failureImage="@drawable/failedbg1"
-                    fresco:failureImageScaleType="fitXY"
-                    fresco:placeholderImage="@drawable/xad"
-                    fresco:placeholderImageScaleType="fitXY"
-                    fresco:retryImage="@drawable/failedbg1"
-                    fresco:retryImageScaleType="fitXY" />
-            </FrameLayout>
-
-            <!--tf-->
-            <FrameLayout
-                android:id="@+id/fl15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/fl5"
-                android:layout_toRightOf="@id/fl14"
                 android:clickable="true"
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 android:focusable="true"
                 android:focusableInTouchMode="true">
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="55dp"
-                    android:background="#fff" />
+                <SurfaceView
+                    android:id="@+id/surfaceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
-                <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/bg_iv115"
-                    android:layout_width="160dp"
-                    android:layout_height="55dp"
-                    android:layout_marginLeft="1dp"
-                    android:clickable="false"
-                    android:scaleType="fitXY"
-                    fresco:failureImage="@drawable/failedbg1"
-                    fresco:failureImageScaleType="fitXY"
-                    fresco:placeholderImage="@drawable/xae"
-                    fresco:placeholderImageScaleType="fitXY"
-                    fresco:retryImage="@drawable/failedbg1"
-                    fresco:retryImageScaleType="fitXY"
-                    tools:src="@drawable/xae" />
             </FrameLayout>
+
+
+            <!--蓝牙输入-->
+
+            <!--同轴 去掉-->
+
+            <!--光纤 去掉-->
+
+            <!--line in 模拟输入-->
+
+            <!--tf-->
 
 
             <!--最后使用的应用-->
-            <FrameLayout
-                android:id="@+id/fl16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/fl5"
-                android:layout_toRightOf="@id/fl15"
-                android:clickable="true"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:focusable="true"
-                android:nextFocusRight="@id/ad"
-                android:visibility="gone">
-
-                <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/bg_iv116"
-                    android:layout_width="83dp"
-                    android:layout_height="55dp"
-                    android:scaleType="fitXY"
-                    fresco:failureImage="@drawable/failedbg1"
-                    fresco:failureImageScaleType="fitXY"
-                    fresco:placeholderImage="@drawable/nnn"
-                    fresco:placeholderImageScaleType="fitXY"
-                    fresco:retryImage="@drawable/failedbg1"
-                    fresco:retryImageScaleType="fitXY" />
-
-                <ImageView
-                    android:id="@+id/iv_lastone"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:scaleType="fitXY" />
-            </FrameLayout>
 
             <FrameLayout
                 android:id="@+id/fl8"
@@ -630,7 +449,8 @@
                 android:id="@+id/fl3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/fl11"
+                android:layout_below="@id/fl2"
+                android:layout_alignParentBottom="false"
                 android:layout_marginLeft="10.0dip"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/fl2"
@@ -671,7 +491,8 @@
                 android:id="@+id/fl6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/fl11"
+                android:layout_below="@id/fl2"
+                android:layout_alignParentBottom="false"
                 android:layout_marginLeft="10.0dip"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/fl3"
@@ -712,7 +533,7 @@
                 android:id="@+id/fl7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/fl11"
+                android:layout_below="@id/fl2"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/fl6"
@@ -854,16 +675,6 @@
             android:id="@+id/mainUpView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
-        <ImageView
-            android:id="@+id/iv_fill"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:clickable="true"
-            android:scaleType="fitXY"
-            android:visibility="gone" />
 
     </RelativeLayout>
 
