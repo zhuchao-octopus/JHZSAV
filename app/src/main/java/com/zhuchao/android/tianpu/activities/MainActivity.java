@@ -90,6 +90,7 @@ import static com.zhuchao.android.libfilemanager.MyAppsManager.DELFROMMYAPPS_ACT
 import static com.zhuchao.android.libfilemanager.MyAppsManager.SCANING_COMPLETE_ACTION;
 import static com.zhuchao.android.tianpu.utils.PageType.MY_APP_TYPE;
 import static com.zhuchao.android.tianpu.utils.PageType.RECENT_TYPE;
+import static oplayer.MediaLibrary.MOVIE_CATEGORY;
 
 public class MainActivity extends Activity implements OnTouchListener, OnGlobalFocusChangeListener, NetChangedCallBack, View.OnLongClickListener,
         View.OnClickListener, TimeHandler.OnTimeDateListener, WallperHandler.OnWallperUpdateListener, AppsChangedCallback, ViewTreeObserver.OnGlobalLayoutListener,
@@ -176,7 +177,7 @@ public class MainActivity extends Activity implements OnTouchListener, OnGlobalF
     private MyAppsManager mMyAppsManager = null;
 
     private int mMainLayoutHeight = 0;
-
+    private OMedia oMedia=null;
     //private int mNavigateStatus = 0;
     public static void sendKeyEvent(final int KeyCode) {
         new Thread() {     //不可在主线程中调用
@@ -310,8 +311,7 @@ public class MainActivity extends Activity implements OnTouchListener, OnGlobalF
 
         requestPermition();
         setupItemBottomTag();
-        OMedia oMedia = new OMedia("http://ivi.bupt.edu.cn/hls/cctv10.m3u8");
-        oMedia.with(this).playOn(binding.surfaceView);
+        MediaLibrary.getSessionManager(this).setUserSessionCallback(this);
     }
 
     @Override
@@ -368,6 +368,11 @@ public class MainActivity extends Activity implements OnTouchListener, OnGlobalF
                 });
             }
         }.start();
+
+        if(oMedia !=null) {
+            OMedia oMedia = new OMedia("http://ivi.bupt.edu.cn/hls/cctv10.m3u8");
+            oMedia.with(this).playOn(binding.surfaceView);
+        }
 
     }
 
@@ -1887,20 +1892,32 @@ public class MainActivity extends Activity implements OnTouchListener, OnGlobalF
 
     @Override
     public void OnSessionComplete(int i, String s) {
-        List<OMedia> list = null;//MediaLibrary.getMediaListByIndex(0);
-        OMedia oMedia = null;
-        if(list != null && list.size()>0)
-        {
-            if(list.get(0) != null) {
-                oMedia = (OMedia) list.get(0);
-                oMedia.with(this).playOn(binding.surfaceView);
-            }
-        }
-        //else
-            //oMedia = new OMedia("http://ivi.bupt.edu.cn/hls/cctv10.m3u8");
-            //oMedia.with(this).playOn(binding.surfaceView);
+        handler.sendEmptyMessage(0x11);
     }
 
+    final Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == 0x11) {
+                MediaLibrary.setupCategoryList();
+                Log.d(TAG,"MediaLibrary.MOVIE_CATEGORY  size ="+ MOVIE_CATEGORY.size());
+                if(MOVIE_CATEGORY.size()<=0) return;
+                List<OMedia> list = MediaLibrary.getMediaListByIndex(0);
+                if(list != null && list.size()>0)
+                {
+                    if(list.get(0) != null) {
+                        oMedia = (OMedia) list.get(0);
+                        oMedia.with(MainActivity.this).playOn(binding.surfaceView);
+                    }
+                }
+                else {
+                   oMedia = new OMedia("http://ivi.bupt.edu.cn/hls/cctv10.m3u8");
+                   oMedia.with(MainActivity.this).playOn(binding.surfaceView);
+                }
+            }
+        }
+    };
 
     public class MyReceiver extends BroadcastReceiver {
         @Override
