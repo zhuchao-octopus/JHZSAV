@@ -369,7 +369,7 @@ public class MainActivity extends Activity implements OnTouchListener, OnGlobalF
             }
         }.start();
 
-        if(oMedia !=null) {
+        if(oMedia ==null) {
             OMedia oMedia = new OMedia("http://ivi.bupt.edu.cn/hls/cctv10.m3u8");
             oMedia.with(this).playOn(binding.surfaceView);
         }
